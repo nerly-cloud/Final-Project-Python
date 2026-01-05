@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final project</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="card">
+    <h1>Survey Form</h1>
+
+    <form action="/submit" method="POST" class="form">
+      <label>Full Name</label>
+      <input type="text" name="full_name" required>
+
+      <label>Email</label>
+      <input type="email" name="email" required>
+
+      <label>Phone</label>
+      <input type="text" name="phone" required>
+
+      <label>Age</label>
+      <input type="number" name="age" min="1" required>
+
+      <label>City</label>
+      <input type="text" name="city" required>
+
+      <label>Country</label>
+      <input type="text" name="country" required>
+
+      <label>Favorite Programming Language</label>
+      <input type="text" name="favorite_language" required>
+
+      <label>Experience Level</label>
+      <select name="experience_level" required>
+        <option value="">Select one</option>
+        <option>Beginner</option>
+        <option>Intermediate</option>
+        <option>Advanced</option>
+      </select>
+
+      <label>Newsletter</label>
+      <select name="newsletter" required>
+        <option value="">Select one</option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+
+      <label>Comments</label>
+      <textarea name="comments" rows="3" required></textarea>
+
+      <button class="btn" type="submit">Submit</button>
+    </form>
+
+    <a class="link" href="/">← Back Home</a>
+  </div>
+</body>
+</html>

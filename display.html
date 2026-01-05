@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final project</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="card">    
+    <h1>Saved Submissions</h1>
+{% if rows %}
+      <table>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Age</th>
+          <th>City</th>
+          <th>Country</th>
+          <th>Language</th>
+          <th>Level</th>
+          <th>Newsletter</th>
+          <th>Comments</th>
+          <th>Date</th>
+        </tr>
+
+        {% for r in rows %}
+        <tr>
+          <td>{{ r[0] }}</td>
+          <td>{{ r[1] }}</td>
+          <td>{{ r[2] }}</td>
+          <td>{{ r[3] }}</td>
+          <td>{{ r[4] }}</td>
+          <td>{{ r[5] }}</td>
+          <td>{{ r[6] }}</td>
+          <td>{{ r[7] }}</td>
+          <td>{{ r[8] }}</td>
+          <td>{{ r[9] }}</td>
+          <td>{{ r[10] }}</td>
+          <td>{{ r[11] }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+    {% else %}
+      <p>No submissions yet. Try adding one from the form.</p>
+    {% endif %}
+
+    <div class="buttons">
+      <a class="btn" href="/form">Add New</a>
+      <a class="btn secondary" href="/">Home</a>
+    </div>
+  </div>
+</body>
+</html>
