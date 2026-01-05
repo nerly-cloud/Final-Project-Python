@@ -3,10 +3,6 @@ import mysql.connector
 
 app = Flask(__name__)
 
-# ✅ IMPORTANT FOR SUBMISSION:
-# Before you submit, remove your real password (teacher request).
-# You can leave password as "" if your local MySQL has no password,
-# OR replace it with a placeholder like "YOUR_PASSWORD_HERE" (but not your real one).
 DB_CONFIG = {
      "host": "localhost",
  "user": "root",
